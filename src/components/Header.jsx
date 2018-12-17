@@ -3,11 +3,12 @@ import '../index.css';
 
 function Header(){
   const headerStyles = {
-    borderBottom: '1px solid grey'
+    minHeight: '1.5em',
+    textAlign: 'center',
   };
   return(
-    <div style={headerStyles}>
-      <h1>Discogs Jukebox</h1>
+    <div style={headerStyles} className="header">
+      <p>Discogs Jukebox</p>
     </div>
   )
 }
