@@ -1,4 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: 'BSDO Font';
   src: url("https://www.fontspace.com/nicks-fonts/beauty-school-dropout-ii");
+} */
+
+@font-face {
+  font-family: 'BeautySchoolDropoutII';
+  src: local('BeautySchoolDropoutII') url(./fonts/BEAUTYSC.TTF) format('TTF');
 }
