@@ -1,13 +1,20 @@
 import React from 'react';
 
-function SearchBox(){
-  return (
-    <div>
 
-      <div className="search">
-        <h3>SearchBox</h3>
+function SearchBox(){
+  let _label;
+
+  return (
+    <div className="search">
+      <p>find music by:</p>
+      <p>Record Label</p>
+      <div>
+        <input type="text" className="input-field" placeholder="Enter Record Label"
+          ref={(input) => {_label = input;}}></input>
+        <button type="submit"><i class="submit-search"></i>Search</button>
       </div>
     </div>
+
   );
 };
 

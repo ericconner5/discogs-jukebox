@@ -1,13 +1,10 @@
 import React from 'react';
-import '../index.css';
+import '../App.css';
 
 function Header(){
-  const headerStyles = {
-    minHeight: '1.5em',
-    textAlign: 'center',
-  };
+
   return(
-    <div style={headerStyles} className="header">
+    <div className="header">
       <p>Discogs Jukebox</p>
     </div>
   )
