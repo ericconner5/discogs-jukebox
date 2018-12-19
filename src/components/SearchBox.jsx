@@ -1,14 +1,13 @@
 import React from 'react';
 import { fetchLabelReleases } from './../actions';
-import { connect, Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { connect } from 'react-redux';
+// import { createStore, applyMiddleware } from 'redux';
 import PropTypes from 'prop-types';
-import thunk from 'redux-thunk';
+// import thunk from 'redux-thunk';
 
 function SearchBox( {dispatch }){
   let _label;
-  console.log(_label);
-
+  // debugger
   SearchBox.propTypes = {
     dispatch: PropTypes.func
   };
@@ -17,7 +16,7 @@ function SearchBox( {dispatch }){
     event.preventDefault();
     console.log(_label.value);
     _label.value = '';
-    return console.log("search sent")
+    // return console.log("search sent")
   }
 
   return (
@@ -27,12 +26,12 @@ function SearchBox( {dispatch }){
       <div>
         <form onSubmit={e => {
           let input = _label;
+          console.log(input.value.trim());
+          console.log('SEARCHED RELEASE:');
           if (!input.value.trim()) {
             return;
           }
           dispatch(fetchLabelReleases(input.value.trim()));
-          console.log('SEARCHED RELEASE:');
-          console.log(input.value.trim());
           input.value = '';
         }}>
           <input type="text" className="input-field" placeholder="Enter Record Label"

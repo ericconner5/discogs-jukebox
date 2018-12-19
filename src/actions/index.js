@@ -7,9 +7,10 @@ export const addLabel = (label) => ({
 });
 
 export function fetchLabelReleases(label) {
+  console.log(label);
   return function (dispatch) {
     label = label.replace(' ', '_');
-    return fetch ('https://api.discogs.com/database/search?q=hyperdub&label=&token=UwNbuUELkfonxrpLhqkxgzTljgcyWXKpCdQFpqYq').then(
+    return fetch("https://api.discogs.com/database/search?q=" + label + "&label=&token=UwNbuUELkfonxrpLhqkxgzTljgcyWXKpCdQFpqYq").then(
       response => response.json(),
       error => console.log('An error occured in fetch.', error)
     ).then(function(json) {

@@ -23,8 +23,7 @@ const render = (Component) => {
   };
   ReactDOM.render(
     <Provider store={store}>
-      <App />
-    <Component style={containerStyles} />,
+      <Component style={containerStyles} />,
     </Provider>,
     document.getElementById('root')
   );
