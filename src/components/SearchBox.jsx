@@ -1,8 +1,14 @@
 import React from 'react';
+import { fetchLabelReleases } from './../actions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-
-function SearchBox(){
+function SearchBox( {dispatch }){
   let _label;
+
+  SearchBox.propTypes = {
+    dispatch: PropTypes.func
+  };
 
   function handleNewSearch(event) {
     event.preventDefault();
@@ -16,7 +22,17 @@ function SearchBox(){
       <p>find music by:</p>
       <p>Record Label</p>
       <div>
-        <form onSubmit={handleNewSearch}>
+        <form onSubmit={e => {
+          e.preventDefault();
+          let input = _label;
+          if (!input.value.trim()) {
+            return;
+          }
+          dispatch(fetchLabelReleases(input.value.trim()));
+          console.log('SEARCHED RELEASE:');
+          console.log(input.value.trim());
+          input.value = '';
+        }}>
           <input type="text" className="input-field" placeholder="Enter Record Label"
             ref={(input) => {_label = input;}}></input>
           <button type="submit">Search</button>
@@ -43,4 +59,4 @@ function SearchBox(){
 // });
 
 
-export default SearchBox;
+export default connect()(SearchBox);

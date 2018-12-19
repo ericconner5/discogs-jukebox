@@ -1,12 +1,22 @@
-import types from './constants';
+// import types from './constants';
+import * as types from './../constants/ActionTypes';
 
-export const addLabel = (label, id) => {
+export const addLabel = (label) => ({
   type: types.ADD_LABEL,
-  label,
-  id
+  newLabel: label
+});
+
+export function fetchLabelReleases(label) {
+  return function (dispatch) {
+    label = label.replace(' ', '_');
+    return fetch ('https://api.discogs.com/database/search?q=hyperdub&label=&token=UwNbuUELkfonxrpLhqkxgzTljgcyWXKpCdQFpqYq').then(
+      response => response.json(),
+      error => console.log('An error occured in fetch.', error)
+    ).then(function(json) {
+      console.log('We have an api response here: ', json)
+    });
+  };
 }
-
-
 
 
 // var settings = {
