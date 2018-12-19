@@ -1,18 +1,20 @@
-import constants from './../constants';
-const { c } = constants;
+import c from './../constants';
 
-const { initialState } = constants;
 
-export default youTubeSearchReducer (state = {initialState}, action) => {
+
+export default (state = {}, action) => {
   let newState;
   let newYouTubeSearch;
-  const { newYouTubeSearch } = action;
+  const { youTubeSearch } = action;
 
   switch (action.type) {
     case c.YOUTUBE_SEARCH:
+      newState = Object.assign({}, state, {
+        isFetching: false,
+        newYouTubeSearch: action.newYouTubeSearch});
 
-      // newstate info from searchDiscogsReducer stuff like here refactor plz for me now
 
+      // accessing this elsewhere will be state.newYouTubeSearch
       return action.youTubeSearch;
     default:
       return state;

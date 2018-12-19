@@ -1,10 +1,13 @@
 import React from 'react';
 import { fetchLabelReleases } from './../actions';
-import { connect } from 'react-redux';
+import { connect, Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import PropTypes from 'prop-types';
+import thunk from 'redux-thunk';
 
 function SearchBox( {dispatch }){
   let _label;
+  console.log(_label);
 
   SearchBox.propTypes = {
     dispatch: PropTypes.func
@@ -23,7 +26,6 @@ function SearchBox( {dispatch }){
       <p>Record Label</p>
       <div>
         <form onSubmit={e => {
-          e.preventDefault();
           let input = _label;
           if (!input.value.trim()) {
             return;

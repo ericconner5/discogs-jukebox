@@ -1,11 +1,6 @@
-import constants from './../constants';
-const { c } = constants;
+import c from './../constants';
 
-const { initialState, types } = constants;
-
-// const searchDiscogsReducer = this was what I started with... doesn't seem right
-
-export default (state = {initialState}, action) => {
+export default (state = {}, action) => {
   let newState;
   let newLabel;
   const { label } = action;
@@ -22,5 +17,3 @@ export default (state = {initialState}, action) => {
       return state;
   }
 };
-
-// export default searchDiscogsReducer;

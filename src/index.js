@@ -6,12 +6,18 @@ import App from './App';
 import { createStore } from 'redux';
 import rootReducer from './reducers/rootReducer';
 import { Provider } from 'react-redux';
-import WebFont from 'webfontloader';
+// import WebFont from 'webfontloader';
 
 const store = createStore(rootReducer);
 // const store = createStore(reducer);
 
 const render = (Component) => {
+  // WebFont.load({
+  //   custom: {
+  //     families: ['BeautySchoolDropoutII'],
+  //     urls: ['./fonts/BEAUTYSC.TTF']
+  //   }
+  // });
   const containerStyles = {
     margin: 'none'
   };
