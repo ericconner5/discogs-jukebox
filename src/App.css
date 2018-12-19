@@ -37,7 +37,7 @@ body {
 .header {
   font-family: "BeautySchoolDropoutII";
   font-size: 4rem;
-  color: #8C00FF;
+  color: #4400D6;
   padding: 1%;
   border-bottom: 1px solid grey;
   margin: 0;
@@ -61,6 +61,11 @@ body {
   border-bottom: 1px solid grey;
   min-width: 60vw;
   min-height: 9rem;
+}
+
+.youtube {
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 .footer {

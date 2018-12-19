@@ -21,8 +21,8 @@ function SearchBox( {dispatch }){
 
   return (
     <div className="search">
-      <p>find music by:</p>
-      <p>Record Label</p>
+      <h3>find music by:</h3>
+      <h3>Record Label</h3>
       <div>
         <form onSubmit={e => {
           let input = _label;
