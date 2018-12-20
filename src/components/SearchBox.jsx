@@ -1,9 +1,9 @@
 import React from 'react';
 import { fetchLabelReleases } from './../actions';
 import { connect } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+// import { createStore, applyMiddleware } from 'redux';
 import PropTypes from 'prop-types';
-import thunk from 'redux-thunk';
+// import thunk from 'redux-thunk';
 
 function SearchBox( {dispatch }){
   let _label;
@@ -12,16 +12,44 @@ function SearchBox( {dispatch }){
     dispatch: PropTypes.func
   };
 
-  function handleNewSearch(event) {
-    event.preventDefault();
-    console.log('handleNewSearch' + _label.value);
-    _label.value = '';
-  }
+  // function handleNewSearch(event) {
+  //   event.preventDefault();
+  //   console.log('handleNewSearch' + _label.value);
+  //   _label.value = '';
+  // }
 
   return (
     <div className="search">
       <h3>find music by:</h3>
-      <h3>Record Label</h3>
+      <div className="search-box-check-items">
+        <h3 className="search-filters">Record Label</h3>
+        <input type="checkbox" className="check-box" id="myCheck"
+           // onClick="myFunction()"
+           >
+        </input>
+      </div>
+      <div className="search-box-check-items">
+        <h3 className="search-filters">Most Recent</h3>
+        <input type="checkbox" className="check-box" id="myCheck"
+           // onClick="myFunction()"
+          >
+        </input>
+      </div>
+      <div className="search-box-check-items">
+        <h3 className="search-filters">Compilations</h3>
+        <input type="checkbox" className="check-box" id="myCheck"
+           // onClick="myFunction()"
+           >
+        </input>
+      </div>
+      <div className="search-box-check-items">
+        <h3 className="search-filters">Albums</h3>
+        <input type="checkbox" className="check-box" id="myCheck"
+           // onClick="myFunction()"
+           >
+        </input>
+      </div>
+
       <div>
         <form onSubmit={e => {
           let input = _label;
@@ -39,7 +67,7 @@ function SearchBox( {dispatch }){
         }}>
           <input type="text" className="input-field" placeholder="Enter Record Label"
             ref={(input) => {_label = input;}}></input>
-          <button type="submit">Search</button>
+          <button className="search-button" type="submit">Search</button>
         </form>
       </div>
     </div>

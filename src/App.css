@@ -20,7 +20,7 @@
   padding: 0;
   text-align: center;
   height: 100vh;
-  background-image: linear-gradient(to bottom, #9affc6, #9dcfbd, #7dc2be, #24c4b5, #00a6b0);
+  background-image: linear-gradient(to bottom, #9bd3be, #88caba, #74c0b7, #69b7b9, #7badb5);
 }
 
 body {
@@ -31,20 +31,19 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   overflow: hidden;
-  background-color: wheat;
+  color: #56377A;
 }
 
 .header {
   font-family: "BeautySchoolDropoutII";
-  font-size: 5rem;
-  color: #680099;
-  padding: 1%;
+  font-size: 5.5rem;
+  color: #481199;
   padding-top: 2.5vh;
-  box-shadow: 0px 5px 5px grey;
+  box-shadow: 0px 7px 7px grey;
   margin: 0;
-  text-shadow: -3px 2px 0px #ff7cb9;
+  text-shadow: -3px 2px 0px #c77a44;
   text-align: inherit;
-  background-image: linear-gradient(to right, #956ab0, #5c87d3, #00a0db, #00b3c8, #06c1a4);
+  background-image: linear-gradient(to right top, #917aa0, #7981ab, #5e88ad, #478ea6, #419197);
 }
 
 .search, .playlist {
@@ -52,13 +51,31 @@ body {
   border-right: 1px solid grey;
   border-bottom: 2px solid grey;
   min-width: 40vw;
-  min-height: 9rem;
+  min-height: 25rem;
   grid-column-start: 1;
   grid-column-end: 3;
   padding-top: 2vh;
 
 }
-
+.input-field {
+  border-radius: 10%;
+  min-width: 15vw;
+  text-align: center;
+}
+.search-button {
+  border-radius: 10%;
+  color: #56377A;
+}
+.check-box {
+  display: inline-block;
+  width: 25px;
+  vertical-align: text-top;
+}
+.search-filters {
+  display: inline-block;
+  width: 10vw;
+  word-break: break-all;
+}
 .youtube, .playing {
   display: grid;
   border-left: 1px solid grey;
@@ -73,7 +90,7 @@ body {
   align-content: space-around;
 }
 .youtubePlayer {
-  box-shadow: -5px 5px 3px grey;
+  box-shadow: -3px 7px 5px grey;
 }
 
 .playing {
