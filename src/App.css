@@ -20,7 +20,7 @@
   padding: 0;
   text-align: center;
   height: 100vh;
-  background-color: lightgrey;
+  background-image: linear-gradient(to bottom, #9affc6, #9dcfbd, #7dc2be, #24c4b5, #00a6b0);
 }
 
 body {
@@ -37,15 +37,14 @@ body {
 .header {
   font-family: "BeautySchoolDropoutII";
   font-size: 5rem;
-  color: #4400D6;
+  color: #680099;
   padding: 1%;
   padding-top: 2.5vh;
-
-  border-bottom: 2px solid grey;
+  box-shadow: 0px 5px 5px grey;
   margin: 0;
-  text-shadow: -3px 4px 0px aqua;
+  text-shadow: -3px 2px 0px #ff7cb9;
   text-align: inherit;
-
+  background-image: linear-gradient(to right, #956ab0, #5c87d3, #00a0db, #00b3c8, #06c1a4);
 }
 
 .search, .playlist {
@@ -74,7 +73,7 @@ body {
   align-content: space-around;
 }
 .youtubePlayer {
-  box-shadow: -5px 5px 3px purple;
+  box-shadow: -5px 5px 3px grey;
 }
 
 .playing {
